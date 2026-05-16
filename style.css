@@ -1,4 +1,42 @@
 /* Reiniciando formatação */
+:root{
+
+    /* LIGHT */
+
+    --bg-principal: #FFFDFC;
+    --bg-secundario: #F8F5F7;
+    --bg-cards: #CC0096;
+
+    --texto-principal: #1E1E1E;
+    --texto-secundario: #5A5A5A;
+
+    --botao: #80005E;
+    --botao-hover: #A8007B;
+
+    --bordas: #80005E;
+    --destaque: #FA00B7;
+
+    --header-bg: #CC0096;
+    --header-texto: #FFFFFF;
+}
+.dark{
+
+    --bg-principal: #12000D;
+    --bg-secundario: #1B0014;
+    --bg-cards: #24001B;
+
+    --texto-principal: #F5F5F5;
+    --texto-secundario: #C9B8C3;
+
+    --botao: #CC0096;
+    --botao-hover: #FA00B7;
+
+    --bordas: #FA00B7;
+    --destaque: #80005E;
+
+    --header-bg: #570040;
+    --header-texto: #F5F5F5;
+}
 *{
     margin: 0;
     padding: 0;
@@ -7,15 +45,24 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color:  pink;
-    color:#f3f4f6;
+    background-color: var(--bg-principal);
+    color:var(--texto-principal);
     line-height: 1.6;
 }
 
 header{
-    background-color: #f3f4f6;
-    color:black;
-    padding:20px
+    background-color: var(--header-bg);
+    color: var(--header-texto);
+    padding:20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.foto-perfil{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid var(--bordas);
 }
 
 nav{
@@ -27,7 +74,7 @@ nav{
     flex-wrap: wrap;
 }
 
-nav.h1{
+nav h1{
     font-size: 28px;
 }
 
@@ -39,12 +86,31 @@ nav ul{
 }
 
 nav a{
-    color: black;
+    position: relative;
+    color: var(--header-texto);
     text-decoration: none;
+    font-weight: bold;
 }
 
-nav a:hover{
-    text-decoration:underline;
+nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #FFD6F5;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 main{
@@ -54,7 +120,7 @@ main{
 }
 
 section{
-    background-color: rgb(204, 0, 150);
+    background-color: var(--destaque);
     margin-bottom: 25px;
     padding: 30px;
     border-radius: 12px;
@@ -71,11 +137,11 @@ section{
 }
 
 .banner p {
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 button{
-    background-color: #ff7bf8; 
+    background-color: var(--botao); 
     color: white;
     padding: 12px 18px;
     border: none;
@@ -84,31 +150,78 @@ button{
 }
 
 button:hover{
-    background-color: #1d4ed8;
+    background-color: var(--botao-hover);
 }
 
-.cards,
-.projetos{
+.icone-tecnologia{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.icone-css{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.icone-java{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.icone-tecnologia,
+.icone-css,
+.icone-java{
+    transition: transform 0.3s ease;
+}
+
+.icone-tecnologia:hover,
+.icone-css:hover,
+.icone-java:hover{
+    transform: scale(1.2);
+}
+
+.cards{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
 .card,
-.projeto,
-#contato{
-    background-color: #f9fafb;
+.projeto{
+    background-color: var(--bg-cards);
     padding: 20px;
-    border-left: 5px solid #ff7bf8;
+    border-left: 5px solid var(--bordas);
     border-radius: 8px;
-    color: black;
+    color: var(--texto-principal);
 }
+
+.card,
+.projeto,
+    section article{
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.projeto:hover,
+section article:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .card h3,
+.card p,
 .projeto h3,
-.projeto p,
-.card p
-#contato{
-    color: black;
+.projeto p{
+    color: var(--texto-principal);
     margin-bottom: 10px;
 }
 
@@ -118,15 +231,15 @@ button:hover{
 
 footer{
     text-align: center;
-    background-color: #f3f4f6;
-    color: black;
-    padding: 28px;
+    background-color: var(--bg-secundario);
+    color: var(--texto-principal);
+    padding: 20px;
 }
 
-@media (max-width: 780px){
+@media (max-width: 700px){
     nav{
         flex-direction: column;
-        gap: 13px;
+        gap: 15px;
     }
 
     nav ul{
@@ -140,4 +253,5 @@ footer{
     .banner h2{
         font-size: 26px;
     }
+
 }

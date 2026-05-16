@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmilyPromaga</title>
+</head>
+<body>
+    <header>
+        <h1>Meus Serviços</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#tecnologias">Serviços</a></li>
+                <li><a href="">Contatos</a></li>
+            
+            </ul>
+        </nav>
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <main>
+        <section class="banner">
+            <h2>Olá, eu sou a Emily</h2>
+            <p>Estou fazendo curso de programação!</p>
+            <button>Clique para falar comigo</button>
+        </section>        
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <p>Sou estudante de programação, e trabalho com marketing!</p>
+        </section>
+        <section id="tencologias">
+            <h2>Tecnologias que estou aprendendo</h2>
+            <div class="cards"> 
+                <article class="cards">
+                    <h3>HTML</h3>
+                    <p>Utilizado para estruturar o conteúdo das páginas</p>
+                </article>
+
+                <article class="cards">
+                    <h3>CSS</h3>
+                    <p>Utilizado para estilizar o visual das páginas</p>
+                </article>
+
+                <article class="cards">
+                    <h3>JavaScript</h3>
+                    <p>utilizado para adicionar interatividade nas páginas</p>
+                </article>
+            </div>
+
+        </section>
+    </main>
+    <footer></footer>
+
+   <ul>
+
+   <p>Escolha seus serviços</p>
+
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+     </ul>
+     <a href="https://www.youtube.com.br" target="_blank">Acesse aqui</a>
+
+
+</body>
+</html>                                                                                     
