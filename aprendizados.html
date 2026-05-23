@@ -1,42 +1,44 @@
-<!-- aprendizados.html -->
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendizados com IA</title>
+    <title>Marketing & Tech Lab | Emily Amorim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <nav>
-            <h1>Meu Portfólio</h1>
-
+            <h1>Emily Amorim</h1>
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="aprendizados.html">Aprendizados com IA</a></li>
+                <li><a href="aprendizados.html">Marketing & Tech Lab</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
             </ul>
-
-            <button type="button" id="botaoTema" onclick="alterarTema()">Dark</button>
+            <button type="button" id="botaoTema" onclick="alterarTema()">🌙 Dark</button>
         </nav>
     </header>
 
-   <main>
+    <main>
         <section class="pagina-aprendizados">
             <div class="cabecalho-aprendizados">
-                <span class="etiqueta-pagina">IA + estudos</span>
-                <h2>Aprendizados com IA</h2>
-                <p>Nesta página, registro dúvidas de programação que estudei com apoio de inteligência artificial generativa.</p>
+                <span class="etiqueta-pagina">Marketing & Tech Lab</span>
+                <h2>Marketing & Tech Lab</h2>
+                <p>
+                    Espaço onde compartilho aprendizados,
+                    testes e experimentações envolvendo
+                    marketing, tecnologia e desenvolvimento web.
+                </p>
             </div>
 
             <form class="form-aprendizado" onsubmit="return adicionarAprendizado(event)">
                 <div class="cabecalho-form">
                     <span class="etiqueta-pagina">Novo registro</span>
-                    <h3>Adicionar novo aprendizado</h3>
-                    <p>Preencha os campos com a dúvida, a resposta resumida e o que você entendeu com suas palavras.</p>
+                    <h3>Adicionar novo insight</h3>
+                    <p>Registre uma observação, um teste ou uma estratégia aplicada.</p>
                     <button type="button" id="botaoNovoRegistro" class="botao-novo-registro">Novo registro</button>
                 </div>
 
@@ -70,11 +72,10 @@
                         <button type="submit">Adicionar aprendizado</button>
                     </div>
                 </div>
-
             </form>
 
             <p id="contadorAprendizados"></p>
-            
+
             <div class="barra-aprendizados">
                 <div class="filtros">
                     <button type="button" onclick="filtrarAprendizados('Todos')">Todos</button>
@@ -82,7 +83,7 @@
                     <button type="button" onclick="filtrarAprendizados('CSS')">CSS</button>
                     <button type="button" onclick="filtrarAprendizados('JavaScript')">JavaScript</button>
                 </div>
-                
+
                 <button type="button" onclick="mostrarOcultarAprendizados()" id="botaoAprendizados">
                     Ocultar Aprendizados
                 </button>
@@ -93,10 +94,9 @@
     </main>
 
     <footer>
-        <p>Todos os direitos reservados a Emily <3 </p>
+        <p>Emily Amorim | Marketing de Performance, CRM e Growth orientado por dados</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>

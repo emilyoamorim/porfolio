@@ -122,8 +122,8 @@ function renderizarAprendizados(lista){
         ` : "";
 
         listaAprendizados.innerHTML += `
-        <article class="aprendizado">
-            <span>${escaparHtml(lista[cont].tema)}</span>
+        <article class="card">
+            <span class="card-tag">${escaparHtml(lista[cont].tema)}</span>
             <h3>${escaparHtml(lista[cont].pergunta)}</h3>
             <p><strong>Resposta:</strong> ${escaparHtml(lista[cont].resposta)}</p>
             <p><strong>O que entendi:</strong> ${escaparHtml(lista[cont].entendimento)}</p>

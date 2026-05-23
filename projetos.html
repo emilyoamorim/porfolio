@@ -1,48 +1,78 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
+    <title>Projetos | Emily Amorim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <header>
+    <header>
         <nav>
-            <h1>Meu Portfolio</h1>
-
+            <h1>Emily Amorim</h1>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="aprendizados.html">Aprendizados com IA</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aprendizados.html">Marketing & Tech Lab</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
             </ul>
-
-            <button type="button" id="botaoTema" onclick="alterarTema()">Dark</button>
+            <button type="button" id="botaoTema" onclick="alterarTema()">🌙 Dark</button>
         </nav>
     </header>
 
     <main>
-        <section class="pagina-projetos">
-            <div class="cabecalho-aprendizados">
-                <span class="etiqueta-pagina">Portfólio</span>
-                <h2>Meus Projetos</h2>
-                <p>Aqui estão os projetos desenvolvidos ao longo da minha jornada com programação.</p>
+        <section class="hero-card pagina-projetos">
+            <div class="hero-copy">
+                <p class="eyebrow">Projetos</p>
+                <h2>Projetos estratégicos em performance e CRM</h2>
+                <p class="hero-text">
+                    Experiências com estratégia digital, otimização de campanhas,
+                    CRM e crescimento sustentável.
+                </p>
             </div>
 
-            <div class="cards">
-                <article class="projeto">
-                    <h3>Meu primeiro portfolio</h3>
-                    <p>Projeto desenvolvido com HTML, CSS e JavaScript.</p>
+            <div class="hero-panel">
+                <div class="hero-metric">
+                    <span>Escopo</span>
+                    <strong>2 projetos</strong>
+                    <p>Foco em performance, automação e estratégia de aquisição.</p>
+                </div>
+                <div class="hero-metric">
+                    <span>Abordagem</span>
+                    <strong>Data-driven</strong>
+                    <p>Decisões orientadas por métricas, testes e ROI.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <p class="eyebrow">Projetos em destaque</p>
+                <h2>Projetos em destaque</h2>
+            </div>
+
+            <div class="card-grid">
+                <article class="card">
+                    <p class="card-tag">Mídia Paga</p>
+                    <h3>Campanhas performance com foco em conversão</h3>
+                    <p>Estratégia de aquisição, estruturação de budget e otimização contínua para rodadas de mídia paga.</p>
+                </article>
+
+                <article class="card">
+                    <p class="card-tag">CRM</p>
+                    <h3>Automação e jornada do cliente</h3>
+                    <p>Construção de flujos, nurturing e acionamento de leads com foco em qualificação e geração de pipeline.</p>
                 </article>
             </div>
         </section>
     </main>
 
-     <footer>
-        <p>Todos os direitos reservados ao Arthur</p>
+    <footer>
+        <p>Emily Amorim | Marketing de Performance, CRM e Growth orientado por dados</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>

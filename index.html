@@ -1,104 +1,224 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmilyPrograma</title>
-
+    <title>Emily Amorim | Marketing de Performance & CRM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <header>
         <nav>
-            <h1>Meu Portfolio</h1>
-             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="aprendizados.html">Aprendizados com IA</a></li>
+            <h1>Emily Amorim</h1>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aprendizados.html">Marketing & Tech Lab</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
             </ul>
-
-            <button type="button" id="botaoTema" onclick="alterarTema()">
-                🌙 Dark
-            </button>
+            <button type="button" id="botaoTema" onclick="alterarTema()">🌙 Dark</button>
         </nav>
     </header>
 
     <main>
-
-        <section class="banner">
-            <img class="foto-perfil" src="img/foto.jpg" alt="foto de perfil">
-            <h2>Olá, eu sou a Emily</h2>
-            <p>Estou fazendo curso de programação!</p>
-
-            <button 
-                type="button" 
-                onclick="alterarTexto()" 
-                id="botaoMensagem">
-                Clique para falar comigo
-            </button>
-
-            <p id="mensagem"></p>
+        <section class="banner hero-card">
+            <div class="hero-copy">
+                <p class="eyebrow">Performance • CRM • Growth</p>
+                <h2>Emily Amorim</h2>
+                <p class="hero-text">
+                    Especialista em Marketing de Performance e CRM
+                    com foco em estratégias orientadas por dados,
+                    mídia paga e crescimento digital.
+                </p>
+                <p class="hero-highlight">
+                    +5 anos de experiência com Google Ads, Meta Ads,
+                    LinkedIn Ads, Salesforce Marketing Cloud e Analytics.
+                </p>
+                <div class="hero-actions">
+                    <a href="#experiencia" class="btn btn-primary">Ver Experiência</a>
+                    <a href="#contato" class="btn btn-secondary">Entrar em contato</a>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <div class="hero-metric">
+                    <span>ROI</span>
+                    <strong>882,21%</strong>
+                    <p>Resultados otimizados em campanhas orientadas por dados</p>
+                </div>
+                <div class="hero-metric">
+                    <span>Budget</span>
+                    <strong>R$ 40 mil</strong>
+                    <p>Gestão estratégica por produto com foco em CAC e performance</p>
+                </div>
+            </div>
         </section>
 
         <section id="sobre">
-            <h2>Sobre mim</h2>
-            <p>Sou estudante de programação, e trabalho com marketing!</p>
+            <div class="section-heading">
+                <p class="eyebrow">Sobre mim</p>
+                <h2>Marketing com estratégia, dados e execução</h2>
+            </div>
+            <p class="section-copy">
+                Profissional de Marketing com mais de 5 anos de experiência
+                em Performance, CRM e estratégias orientadas por dados.
+                Atuo no planejamento e otimização de campanhas digitais,
+                gestão de KPIs e desenvolvimento de estratégias focadas
+                em geração de leads e crescimento de resultados.
+            </p>
+            <p class="section-copy">
+                Tenho experiência com Google Ads, Meta Ads,
+                LinkedIn Ads, Salesforce Marketing Cloud,
+                Google Analytics e automação de marketing.
+            </p>
+        </section>
+
+        <section id="resultados">
+            <div class="section-heading">
+                <p class="eyebrow">Resultados e Experiência</p>
+                <h2>Resultados e Experiência</h2>
+            </div>
+            <div class="card-grid">
+                <article class="card">
+                    <p class="card-tag">Performance</p>
+                    <h3>ROI de 882,21% em campanhas de mídia paga</h3>
+                    <p>
+                        Otimização contínua de campanhas orientadas por dados
+                        com foco em geração de leads B2B e performance.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <p class="card-tag">Planejamento</p>
+                    <h3>Gestão de budget de R$ 40 mil por produto</h3>
+                    <p>
+                        Planejamento estratégico e acompanhamento de KPIs
+                        para maximizar ROI e reduzir CAC.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <p class="card-tag">CRM</p>
+                    <h3>+20% de leads qualificados</h3>
+                    <p>
+                        Estruturação de campanhas e segmentação estratégica
+                        focadas em aumento de conversão.
+                    </p>
+                </article>
+            </div>
         </section>
 
         <section id="tecnologias">
-            <h2>Tecnologias que estou aprendendo</h2>
-
-            <div class="cards">
-
+            <div class="section-heading">
+                <p class="eyebrow">Ferramentas & Especialidades</p>
+                <h2>Ferramentas & Especialidades</h2>
+            </div>
+            <div class="card-grid expertise-grid">
                 <article class="card">
-                    <img class="icone-tecnologia" src="https://cdn.iconscout.com/icon/free/png-256/free-html-logo-icon-svg-download-png-3031492.png?f=webp&w=128" alt="icone html">
-                    <h3>HTML</h3>
-                    <p>Utilizado para estruturar o conteúdo das páginas</p>
+                    <h3>Performance & Mídia Paga</h3>
+                    <ul>
+                        <li>Google Ads</li>
+                        <li>Meta Ads</li>
+                        <li>LinkedIn Ads</li>
+                        <li>Otimização de Conversão</li>
+                    </ul>
                 </article>
 
                 <article class="card">
-                    <img class="icone-css" src="img/css.png" alt="icone css">
-                    <h3>CSS</h3>
-                    <p>Utilizado para estilizar o visual das páginas</p>
+                    <h3>CRM & Automação</h3>
+                    <ul>
+                        <li>Salesforce Marketing Cloud</li>
+                        <li>RD Station</li>
+                        <li>Jornada do Lead</li>
+                        <li>Automação de Marketing</li>
+                    </ul>
                 </article>
 
                 <article class="card">
-                    <img class="icone-java" src="img/java.png" alt="icone javascript">
-                    <h3>JavaScript</h3>
-                    <p>Utilizado para adicionar interatividade nas páginas</p>
+                    <h3>Data & Analytics</h3>
+                    <ul>
+                        <li>Google Analytics</li>
+                        <li>Looker Studio</li>
+                        <li>Power BI</li>
+                        <li>Dashboards e KPIs</li>
+                    </ul>
                 </article>
 
+                <article class="card">
+                    <h3>Tech & Web</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>GitHub</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
-        <section id="projetos">
-            <h2>Projetos</h2>
+        <section id="experiencia">
+            <div class="section-heading">
+                <p class="eyebrow">Experiência Profissional</p>
+                <h2>Experiência Profissional</h2>
+            </div>
+            <div class="experience-list">
+                <article class="timeline-card">
+                    <p class="timeline-period">Jan 2024 — Atual</p>
+                    <h3>HSM — Analista de Performance & CRM Sênior</h3>
+                    <ul>
+                        <li>Estratégias de CRM com Salesforce Marketing Cloud</li>
+                        <li>Gestão de campanhas B2B</li>
+                        <li>Gestão de KPIs</li>
+                        <li>Dashboards estratégicos</li>
+                        <li>ROI de 882,21%</li>
+                    </ul>
+                </article>
 
-            <article class="projeto">
-                <h3>Meu primeiro projeto</h3>
-                <p>Projeto desenvolvido na minha primeira aula de programação usando HTML, CSS e JavaScript</p>
-            </article>
-        </section>
+                <article class="timeline-card">
+                    <p class="timeline-period">Abr 2022 — Dez 2023</p>
+                    <h3>Mirage Marketing — Gerente de Marketing</h3>
+                    <ul>
+                        <li>Gestão de equipe</li>
+                        <li>Gestão de carteira com +30 clientes</li>
+                        <li>Google Ads e Meta Ads</li>
+                        <li>Estruturação de CRM</li>
+                        <li>+20% leads qualificados</li>
+                    </ul>
+                </article>
 
-        <section id="contato">
-            <h2>Contato</h2>
-
-            <div class="card">
-                <p>
-                    LinkedIn:
-                    <a href="https://www.linkedin.com/in/emily-amorim1000" target="_blank">
-                        Emily Amorim
-                    </a>
-                </p>
+                <article class="timeline-card">
+                    <p class="timeline-period">Jan 2021 — Mar 2022</p>
+                    <h3>Mirage Marketing — Analista de Marketing</h3>
+                    <ul>
+                        <li>Gestão de performance</li>
+                        <li>RD Station</li>
+                        <li>Planejamento de conteúdo</li>
+                        <li>Gestão de e-commerce</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
+        <section id="contato" class="contact-cta">
+            <div class="section-heading">
+                <p class="eyebrow">Contato</p>
+                <h2>Vamos criar estratégias de crescimento digital?</h2>
+            </div>
+            <p class="section-copy">
+                Estou aberta para oportunidades, projetos e conexões
+                na área de marketing, performance e CRM.
+            </p>
+            <div class="contact-actions">
+                <a href="https://www.linkedin.com/in/emily-amorim1000" target="_blank" class="btn btn-primary">LinkedIn</a>
+                <a href="mailto:contato@emilyamorim.com" class="btn btn-secondary">E-mail</a>
+                <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-secondary">WhatsApp</a>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>Todos os direitos reservados a Emily</p>
+        <p>Emily Amorim | Marketing de Performance, CRM e Growth orientado por dados</p>
     </footer>
 
     <script src="script.js"></script>
