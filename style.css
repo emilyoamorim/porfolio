@@ -1,31 +1,40 @@
-﻿/* Página de aprendizados: fundo claro, padding extra */
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Página de aprendizados: alinhada ao padrão visual da home */
 .pagina-aprendizados {
-    background: var(--bg-principal);
-    box-shadow: none;
-    padding: 0;
-    margin-bottom: 0;
+    background-color: var(--destaque);
+    box-shadow: var(--shadow-suave);
+    padding: 32px;
+    margin-bottom: 24px;
 }
 
 .cabecalho-aprendizados {
     background: var(--bg-cards);
+    border: 1px solid var(--bordas);
     border-radius: 18px;
     padding: 28px 24px 18px 24px;
     margin-bottom: 24px;
     box-shadow: var(--shadow-suave);
+    display: grid;
+    gap: 12px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.cabecalho-aprendizados .section-copy {
+    margin-bottom: 0;
+    max-width: 760px;
+}
 
 :root{
     --bg-principal: #FFFDFC;
     --bg-secundario: #F8F5F7;
     --bg-cards: #FFEAF5;
 
-    --texto-principal: #4B1232;
-    --texto-secundario: #5F2148;
+    --texto-principal: #5D2342;
+    --texto-secundario: #6D3554;
 
     --botao: #F4C4E2;
     --botao-hover: #EAA7D4;
-    --botao-texto: #4B1232;
+    --botao-texto: #5D2342;
 
     --bordas: #E58BC4;
     --destaque: #FA00B7;
@@ -113,14 +122,36 @@ nav h1{
 
 nav ul{ list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
 
+nav li{
+    position: relative;
+}
+
 nav a{
+    position: relative;
     color: var(--header-texto);
     text-decoration: none;
     font-weight: 600;
+    padding-bottom: 4px;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+nav a::before{
+    content: "";
+    position: absolute;
+    inset: auto auto 0 0;
+    width: 0;
+    height: 2px;
+    background: var(--header-texto);
+    border-radius: 999px;
+    transition: width 0.25s ease;
+}
+
 nav a:hover{ opacity: 0.88; transform: translateY(-1px); }
+
+nav a:hover::before,
+nav a.ativo::before{
+    width: 100%;
+}
 
 main{ max-width: 1080px; margin: 0 auto; padding: 30px 20px 48px; }
 
@@ -134,14 +165,32 @@ section{
 
 .hero-card{
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1fr;
     gap: 24px;
     align-items: center;
     background-color: var(--destaque);
 }
 
-.eyebrow{
-    display: inline-block;
+.section-pink{
+    background-color: var(--destaque);
+}
+
+.highlight-card{
+    background-color: var(--bg-cards);
+    border: 1px solid var(--bordas);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: var(--shadow-suave);
+    margin-bottom: 24px;
+}
+
+.eyebrow,
+.etiqueta-pagina{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-size: 0.75rem;
@@ -258,7 +307,7 @@ footer{
 }
 
 .form-aprendizado{
-    background: var(--form-bg);
+    background: var(--bg-cards);
     border: 1px solid var(--bordas);
     border-radius: 16px;
     box-shadow: var(--shadow-suave);
@@ -267,6 +316,33 @@ footer{
 }
 
 .cabecalho-form h3{ font-size: 1.2rem; }
+.cabecalho-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.botao-novo-registro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 8px;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--botao);
+    color: var(--botao-texto);
+    border: none;
+    transition: background 0.18s, transform 0.18s;
+    box-shadow: none;
+}
+.botao-novo-registro:hover {
+    background: var(--botao-hover);
+    transform: translateY(-1px);
+}
 
 .campo-form input,
 .campo-form select,
@@ -279,6 +355,7 @@ footer{
     color: var(--texto-principal);
     font: inherit;
     transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    margin-top: 32px;
 }
 
 .campo-form input:hover,
@@ -299,43 +376,9 @@ footer{
     margin-bottom: 24px;
 }
 
-.cards-aprendizados .aprendizado {
-    background-color: var(--bg-cards);
-    border: 1px solid var(--bordas);
-    border-radius: 16px;
-    padding: 22px;
-    box-shadow: var(--shadow-suave);
-    transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-.cards-aprendizados .aprendizado:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-forte);
-}
-.cards-aprendizados .card-tag {
-    display: inline-flex;
-    background: var(--tag-bg);
-    color: var(--tag-texto);
-    border-radius: 999px;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-.cards-aprendizados p {
-    color: var(--texto-secundario);
-}
-}
-.aprendizado{
-    background: var(--bg-cards);
-    border: 1px solid var(--bordas);
-    border-radius: 16px;
-    box-shadow: var(--shadow-suave);
-    padding: 20px 18px 18px 18px;
-}
-
 .oculto{ display: none; }
 
-#contadorAprendizados{ font-weight: 700; margin-bottom: 16px; }
+#contadorAprendizados{ font-weight: 700; margin-bottom: 18px; color: var(--texto-principal); }
 
 .barra-aprendizados{
     display: flex;
@@ -353,8 +396,8 @@ footer{
     gap: 8px;
 }
 .filtros button {
-    border-radius: 999px;
-    padding: 7px 16px;
+    border-radius: 8px;
+    padding: 12px 18px;
     font-size: 1rem;
     font-weight: 600;
     background: var(--botao);
@@ -367,19 +410,65 @@ footer{
     background: var(--botao-hover);
     transform: translateY(-1px);
 }
-}
 
 @media (max-width: 820px){
     .hero-card{ grid-template-columns: 1fr; }
     section{ padding: 24px; }
     nav{ justify-content: center; }
+    .pagina-aprendizados{ padding: 24px; }
+    .cabecalho-aprendizados{ padding: 24px 20px 16px; }
+    .form-aprendizado{ padding: 22px 18px 16px; }
+    .barra-aprendizados{ align-items: stretch; }
 }
 
 @media (max-width: 700px){
     main{ padding: 22px 14px 40px; }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    nav ul{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
     .contact-actions,
     .hero-actions{ flex-direction: column; }
     .btn,
     .contact-actions .btn,
     .hero-actions .btn{ width: 100%; }
+    .pagina-aprendizados{ padding: 20px; }
+    .cabecalho-aprendizados{ padding: 20px 16px 14px; }
+    .form-aprendizado{ padding: 20px 16px 14px; }
+    .barra-aprendizados{ flex-direction: column; align-items: stretch; }
+    .filtros{ width: 100%; }
+    .filtros button,
+    #botaoAprendizados,
+    .acoes-form button{
+        width: 100%;
+    }
+    .botao-novo-registro,
+    #botaoNovoRegistro{
+        width: fit-content;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 520px){
+    .card-grid{ grid-template-columns: 1fr; }
+    .filtros{ flex-direction: column; }
+    .filtros button{
+        justify-content: center;
+    }
+    .campo-form input,
+    .campo-form select,
+    .campo-form textarea{
+        font-size: 16px;
+    }
+    .cabecalho-aprendizados h2,
+    .section-heading h2,
+    .hero-copy h2{
+        font-size: 1.5rem;
+    }
 }

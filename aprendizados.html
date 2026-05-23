@@ -12,10 +12,10 @@
 <body>
     <header>
         <nav>
-            <h1>Emily Amorim</h1>
+            <h1>Currículo</h1>
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="aprendizados.html">Marketing & Tech Lab</a></li>
+                <li><a href="aprendizados.html" class="ativo">Marketing & Tech Lab</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
             </ul>
             <button type="button" id="botaoTema" onclick="alterarTema()">🌙 Dark</button>
@@ -24,10 +24,10 @@
 
     <main>
         <section class="pagina-aprendizados">
-            <div class="cabecalho-aprendizados">
-                <span class="etiqueta-pagina">Marketing & Tech Lab</span>
+            <div class="section-heading cabecalho-aprendizados">
+                <p class="eyebrow">Marketing & Tech Lab</p>
                 <h2>Marketing & Tech Lab</h2>
-                <p>
+                <p class="section-copy">
                     Espaço onde compartilho aprendizados,
                     testes e experimentações envolvendo
                     marketing, tecnologia e desenvolvimento web.
@@ -89,7 +89,7 @@
                 </button>
             </div>
 
-            <div id="listaAprendizados" class="cards-aprendizados"></div>
+            <div id="listaAprendizados" class="card-grid"></div>
         </section>
     </main>
 
